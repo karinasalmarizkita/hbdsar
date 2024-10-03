@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun, Sarah Dinda!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        #typing-text {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 1.6;
+            border-right: 2px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+        .wish {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff85c4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selamat Ulang Tahun, Sarah Dinda!</h1>
+    <p id="typing-text"></p>
+
+    <p class="wish">Pibesdey, sayang!</p>
+
+    <button onclick="playMusic()">Putar Musik</button>
+
+    <audio id="birthday-song">
+        <source src="audio.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    <script>
+        // Efek teks mengetik
+        const text = Yey, selamat ulang tahun Sarah. Alhamdulillah masih dikasih umur panjang ya, semoga di umur kamu yang semakin bertambah ini kamu selalu dikelilingi oleh orang-orang baik yang tulus sayang sama kamu, dilindungi dari orang-orang yang mau jahat sama kamu. Semoga sifat, sikap, dan perilaku juga semakin dewasa dan jauh lebih baik dari sebelumnya, dan semoga rezeki kamu datang dari segala arah ya. Terima kasih Sarah sudah kenal sama aku dan yang lain. Jangan lupa juga kamu berterima kasih ke diri kamu sendiri ya, karena kamu sudah berhasil bertahan sampai sejauh ini dan berhasil melewati masalah-masalah besar yang datang kemarin. Maafkan orang-orang yang jahat sama kamu, karena balasan setimpal hanya Allah yang bisa kasih. Aamiin.;
+
+        let index = 0;
+        function typeText() {
+            if (index < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeText, 50); // Kecepatan mengetik
+            }
+        }
+        typeText();
+
+        // Musik otomatis terputar ketika tombol diklik
+        function playMusic() {
+    const audio = document.getElementById("birthday-song");
+    if (audio.paused) {
+        audio.play().then(() => {
+            console.log("Musik diputar");
+        }).catch(error => {
+            console.log("Gagal memutar musik:", error);
+        });
+    } else {
+        console.log("Musik sudah diputar.");
+    }
+
+    </script>
+
+</body>
+</html>
